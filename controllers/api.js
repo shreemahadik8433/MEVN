@@ -1,6 +1,6 @@
 const Post = require("../models/posts");
 const fs = require("fs");
-module.exports = class API{
+module.exports = class API{  //module.exports exports anything to the outside world or we can say, anything written in module.exports can be used by other files as a module
     //fetch all posts
     static async fetchAllPost(req,res){
         try {
@@ -35,7 +35,7 @@ module.exports = class API{
     //update a post
     static async updatePost(req,res){
         const id = req.params.id;
-        let new_image=''
+        let new_image='';
         if(req.file){
             new_image = req.file.filename;
             try {
